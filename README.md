@@ -1,34 +1,17 @@
-# Pluto ✦ 
-*A Lightweight PHP Boilerplate for Rapid Development.*
+# Sandbox AI Testing
 
-Stop wrestling with heavy frameworks. Pluto gives you a clean, PSR-compliant structure with routing, controllers, and views 
-— nothing more, nothing less. Perfect for small projects, APIs, or learning PHP internals.
+*A Minimal PHP Sandbox for AI Experiments.*
 
-Need more? Just install the packages you need via Composer."
+Sandbox AI Testing for playing with AI:
+- RAG experiments
+- Ollama integration
+- Vector search testing
+- AI chat playgrounds
+- Prompt engineering
+- Local LLM experimentation
 
-## Features
+## Tech Stack
 
-- Routing
-- Controllers
-- Views
-- Helpers
-- Environment configuration
-- Clean structure
-
-## Structure
-
-```text
-/app
-├── Controllers
-├── Helpers
-├── Services
-└── Views
-
-/public
-├── css
-└── images
-
-/core
-
-/vendor
-```
+- PHP 8.4
+- Ollama
+- Qdrant
