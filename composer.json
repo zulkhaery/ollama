@@ -1,0 +1,34 @@
+{
+    "name": "zulkhaery/pluto",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "core/helpers.php",
+            "app/Helpers/helper.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Zulkhaery",
+            "email": "zulkhaery@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "hkulekci/qdrant": "^1.0",
+        "symfony/http-client": "^8.0",
+        "nyholm/psr7": "^1.8",
+        "guzzlehttp/guzzle": "^7.10",
+        "smalot/pdfparser": "^2.12"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

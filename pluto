@@ -1,0 +1,52 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
+
+
+$command = $argv[1] ?? null;
+
+switch ($command) {
+    case 'serve':
+        $appUrl = $_ENV['APP_URL'] ?? 'http://localhost:8000';
+        $parsed = parse_url($appUrl);
+        $port = $parsed['port'] ?? 8000;
+
+        foreach ($argv as $arg) {
+            if (str_starts_with($arg, '--port=')) {
+                $port = explode('=', $arg)[1];
+            }
+        }
+
+        echo "\n";
+        echo "Pluto Development Server\n";
+        echo "Starting at http://localhost:$port\n\n";
+
+        passthru("php -S localhost:$port -t public");
+
+    break;
+    case 'about':
+        echo "\n";
+        echo "PLUTO\n\n";
+        echo "PHP Boilerplate for Rapid Development.\n";
+        echo "PSR-compliant structure with routing, controllers, and views — nothing more, nothing less.\n";
+        echo "Perfect for small projects, APIs, or learning PHP internals\n\n";
+
+    break;
+    default:
+        echo <<<TEXT
+        
+        Usage: php pluto <command> [options]
+        
+        Available commands:
+          serve       Start the local development server
+                      --port=PORT   Specify port (default: 8000)
+                      
+          about       Display information about Pluto
+        
+        TEXT;
+        break;
+}
