@@ -1,6 +1,6 @@
 # Sandbox AI Testing
 
-*A Minimal PHP Sandbox for AI Experiments.*
+*PHP Sandbox for AI Experiments.*
 
 Sandbox AI Testing for playing with AI:
 - RAG experiments
